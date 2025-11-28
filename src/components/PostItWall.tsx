@@ -2,16 +2,16 @@ import React, { useState } from 'react';
 import './PostItWall.css';
 import type { PostItData, RandomStyle } from './types';
 
-const PHOTO_COUNT = 60;
+const PHOTO_COUNT = 129;
 const POST_IT_DATA: PostItData[] = Array.from({ length: PHOTO_COUNT }, (_, i) => ({
   id: i + 1,
-  imageUrl: `/images/${(i % 30) + 1}.png`,
+  imageUrl: `images/${i + 1}.jpg`,
   message: `Guestbook ${i + 1}`,
 }));
 
 // 배치 관련 설정값
 const MAX_WIDTH = 1800; // 기준 너비
-const BASE_HEIGHT = 1850; // 기준 높이
+const BASE_HEIGHT = 3600; // 기준 높이
 const MIN_DISTANCE = 160; // 겹침 방지 최소 거리
 
 // 포스트잇 크기 및 여백 설정 (px)
